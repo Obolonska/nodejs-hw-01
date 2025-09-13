@@ -3,7 +3,7 @@ import { writeContacts } from '../utils/writeContacts.js';
 import { faker } from '@faker-js/faker';
 import { createFakeContact } from '../utils/createFakeContact.js';
 
-const generateContacts = async (number) => {
+export const generateContacts = async (number) => {
   const contacts = await readContacts();
   const newContacts = faker.helpers.multiple(createFakeContact, {
     count: number,
